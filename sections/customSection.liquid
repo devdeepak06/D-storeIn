@@ -1,0 +1,30 @@
+<div>
+  <h2>{{ section.settings.title }}</h2>
+  <p>{{ section.settings.content }}</p>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Custom Section"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content",
+      "default": "This is a custom section."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
